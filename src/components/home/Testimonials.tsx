@@ -27,7 +27,14 @@ const Testimonials = () => {
             author: 'Masha A.',
             testimonial: 'Gravette transformed our outdated website into a modern masterpiece. They were fast, efficient, and the results speak for themselves. A game-changer for our business!'
         },
-        
+        {
+            author: 'Masha A.',
+            testimonial: 'Gravette transformed our outdated website into a modern masterpiece. They were fast, efficient, and the results speak for themselves. A game-changer for our business!'
+        },
+        {
+            author: 'Masha A.',
+            testimonial: 'Gravette transformed our outdated website into a modern masterpiece. They were fast, efficient, and the results speak for themselves. A game-changer for our business!'
+        },
     ]
 
     return (
@@ -37,9 +44,38 @@ const Testimonials = () => {
                 <h1 className='text-5xl font-semibold mt-3 bg-clip-text text-transparent bg-gradient-to-b from-white from-50% to-zinc-300'>These businesses leveled up their online presence thanks to Gravette. Here's what they have to say.</h1>
             </div>
             <div className='relative max-w-screen-2xl mx-auto px-4'>
-                <div className="absolute bg-gradient-to-b from-transparent to-gray-900 from-70%  z-50 w-full h-full pointer-events-none"></div>
-                <div className='grid grid-cols-4 relative gap-8 mt-16 bottom-4 z-10'>
-                    {testimonialData.map((testimonial, i, arr) => <Testimonial {...testimonial} isMain={i === 1} />)}
+                <div className="absolute bg-gradient-to-b from-transparent to-gray-900 from-40% to-90%  z-50 w-full h-full pointer-events-none"></div>
+                <div className='grid grid-cols-4 grid-flow-col  relative gap-8 mt-16 bottom-4 z-10'>
+                    <div className="  col-span-2 row-end-1 col-start-2">
+                        <Testimonial {...testimonialData[1]} isMain={true} />
+                    </div>
+
+                    <div className="contents">
+                        <div className='row-span-2 space-y-8'>
+                            <Testimonial {...testimonialData[0]} />
+                            <Testimonial {...testimonialData[0]} />
+                            <Testimonial {...testimonialData[0]} />
+                        </div>
+                        <div className='row-start-1 space-y-8'>
+                            <Testimonial {...testimonialData[0]} />
+                            <Testimonial {...testimonialData[0]} />
+                        </div>
+                    </div>
+
+                    <div className="contents">
+                        <div className='row-start-1 space-y-8'>
+                            <Testimonial {...testimonialData[0]} />
+                            <Testimonial {...testimonialData[0]} />
+                        </div>
+                        <div className='row-span-2 space-y-8'>
+                            <Testimonial {...testimonialData[0]} />
+                            <Testimonial {...testimonialData[0]} />
+                            <Testimonial {...testimonialData[0]} />
+                        </div>
+
+                    </div>
+
+                    {/* {testimonialData.map((testimonial, i, arr) => <Testimonial {...testimonial} isMain={i === 1} />)} */}
                 </div>
             </div>
         </div>
