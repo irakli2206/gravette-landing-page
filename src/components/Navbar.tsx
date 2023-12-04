@@ -9,8 +9,8 @@ import { Button } from './Buttons'
 
 
 let navLinks = [
-    { name: 'Toolkit', path: '/toolkit' },
-    { name: 'About', path: '/about' },
+    // { name: 'Toolkit', path: '/toolkit' },
+    // { name: 'About', path: '/about' },
     // { name: 'Contact', href: '/contact', current: false },
 ]
 
@@ -49,14 +49,14 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
-                    {navLinks.map((item) => (
+                    {/* {navLinks.map((item) => (
                         <Link key={item.name} to={item.path} className={classNames("text-sm relative text-gray-300 hover:text-white duration-150 font-semibold  leading-6   ", {
                             // 'before:bg-indigo-700 before:absolute before:w-[150%] before:h-[120%] before:rounded-md before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:z-[-1]': item.current
                             '!text-white drop-shadow-glow': currentPath == item.path
                         })}>
                             {item.name}
                         </Link>
-                    ))}
+                    ))} */}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <Link to='schedule' >
@@ -91,7 +91,7 @@ const Navbar = () => {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-                                {navLinks.map((item) => (
+                                {/* {navLinks.map((item) => (
                                     <Link
                                         key={item.name}
                                         to={item.path}
@@ -99,7 +99,7 @@ const Navbar = () => {
                                     >
                                         {item.name}
                                     </Link>
-                                ))}
+                                ))} */}
                             </div>
                             <div className="py-6">
                                 <Link

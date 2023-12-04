@@ -16,7 +16,7 @@ const CTA = () => {
                     </div>
                 </div>
 
-                <div className='relative h-[620px] -mr-48 my-auto z-30 '>
+                <div className='relative h-[550px] -mr-48 my-auto z-30 '>
                     <div className='w-full h-full bg-gradient-to-r from-transparent to-gray-900 to-75% absolute '></div>
                     <img src={Chart} className='h-full object-cover object-left ' />
                 </div>
