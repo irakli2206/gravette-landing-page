@@ -37,7 +37,7 @@ const Testimonials = () => {
         <div className='max-w-5xl py-24 mx-auto'>
             <div className='flex flex-col max-w-4xl items-center text-center mx-auto'>
                 <h3 className='text-md font-medium text-indigo-400'>Testimonials</h3>
-                <h1 className='text-5xl font-semibold mt-3'>Dozens of traders leveled up their game thanks to Coin Counsel, here's what they say.</h1>
+                <h1 className='text-5xl font-semibold mt-3'>These businesses leveled up their online presence thanks to Gravette. Here's what they have to say.</h1>
             </div>
             <div className='relative '>
                 <div className="absolute bg-gradient-to-b from-transparent to-gray-900 from-50% to-90% z-50 w-full h-full pointer-events-none"></div>

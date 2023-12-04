@@ -36,11 +36,11 @@ const Hero = () => {
                 </div> */}
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center" onClick={() => setOfferModalOpen(true)}>
                         <div className="relative rounded-full px-3 py-1 text-sm leading-6 transition text-gray-300 ring-1 ring-indigo-500/30 hover:ring-indigo-500/50 bg-indigo-500 bg-opacity-10">
-                            Don't miss out special referral offer.{' '}
-                            <a href="#" className="font-semibold text-indigo-400">
+                            Don't miss our special referral offer.{' '}
+                            <div   className="font-semibold text-indigo-400 inline cursor-pointer">
                                 <span className="absolute inset-0" aria-hidden="true" />
                                 Read more <span aria-hidden="true">&rarr;</span>
-                            </a>
+                            </div>
                         </div>
                     </div>
                     <div className="text-center">
