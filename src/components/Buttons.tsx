@@ -12,7 +12,7 @@ type ButtonProps = {
 export const Button = ({ title, size = 'md', className, onClick }: ButtonProps) => {
     return (
         <div onClick={onClick} className={classNames(`${className} cursor-pointer transition rounded-full shadow-button bg-indigo-800 hover:bg-indigo-700 text-sm font-medium text-white  hover:shadow-button-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`, {
-            'px-4 py-1.5': size == 'sm',
+            'px-6 py-2 ': size == 'sm',
             'px-6 py-2.5': size == 'md',
             'px-11 py-3': size == 'lg',
             'px-14 py-3': size == 'xl',

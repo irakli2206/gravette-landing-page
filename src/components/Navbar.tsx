@@ -60,7 +60,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <Link to='schedule' >
-                        <Button title='Message Us' onClick={() => { }} />
+                        <Button title='Message Us' size='sm' onClick={() => { }} />
                     </Link>
                     {/* <a href="#" className="text-sm font-semibold leading-6  flex gap-2">
                         Schedule <AppIcon name='arrow-right' />
