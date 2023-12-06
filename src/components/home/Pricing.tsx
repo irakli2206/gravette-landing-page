@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PricingCard from '../PricingCard'
 import { RadioGroup } from '@headlessui/react'
 import classNames from 'classnames'

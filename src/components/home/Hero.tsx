@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { ArrowButton, Button } from '../Buttons'
-import Modal from '../Modal'
+import { useState } from 'react'
 import OfferModal from './OfferModal'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import AppIcon from './AppIcon'
 import classNames from 'classnames'
 
@@ -14,7 +14,7 @@ type Props = {
     className?: string
 }
 
-const PricingCard = ({ isMain, type, price, desc, features, timeUnit, buttonAction, priceOff, className }: Props) => {
+const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceOff, className }: Props) => {
     return (
         <div className={classNames(`flex flex-col relative flex-1  rounded-xl transition  px-10 py-12  pointer-events-none overflow-hidden ${className}`, {
             'ring-1  ring-indigo-500/30 hover:ring-indigo-500/50 bg-indigo-500 bg-opacity-10': isMain,

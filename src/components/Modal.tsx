@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import React, { Fragment, useRef } from 'react'
+import { Fragment } from 'react'
 
 
 type Props = {

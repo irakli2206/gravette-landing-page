@@ -1,5 +1,4 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
-import React from 'react'
 import {BiSolidLeaf} from 'react-icons/bi'
 import {FaBitcoin} from 'react-icons/fa'
 

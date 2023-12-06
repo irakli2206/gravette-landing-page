@@ -1,8 +1,6 @@
 import { Transition, Dialog } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { Button } from '../Buttons'
-import AppIcon from '../AppIcon'
 import { GiReceiveMoney } from "react-icons/gi";
 
 type Props = {

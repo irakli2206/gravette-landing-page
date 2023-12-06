@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Testimonial from '../Testimonial'
 import AWLogo from '../../assets/aw-light.png'
 
