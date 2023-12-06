@@ -3,6 +3,7 @@ import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 import React, { Fragment } from 'react'
 import { Button } from '../Buttons'
 import AppIcon from '../AppIcon'
+import { GiReceiveMoney } from "react-icons/gi";
 
 type Props = {
     isOpen: boolean
@@ -48,14 +49,14 @@ const OfferModal = ({ isOpen, onClose }: Props) => {
 
                                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                                         <Dialog.Title as="h3" className="text-2xl flex gap-3 justify-center items-center font-semibold text-center leading-6 text-white">
-                                            <h1>Autumn Offer</h1>
+                                            <h1>Referral Offer</h1>
                                             <div className="bg-indigo-300 p-2 rounded-full">
-                                                <AppIcon name='leaf' className='text-indigo-600' />
+                                                <GiReceiveMoney name='leaf' className='text-indigo-600' />
                                             </div>
                                         </Dialog.Title>
                                         <div className="mt-2">
-                                            <p className="text-md text-gray-300">
-                                            Summer heat is behind, so no more excuses to be lazy. Coin Counsel is announcing Autumn sales! Don’t miss out on the offer.
+                                            <p className="text-md text-gray-200">
+                                                Enjoy a rewarding 15% commission! Simply refer us to a customer by sending an email with their details. Once they're on board, you earn your share of the agreed-upon sum. It's that easy – spreading the word has never been more lucrative!
                                             </p>
                                         </div>
                                     </div>
@@ -63,7 +64,7 @@ const OfferModal = ({ isOpen, onClose }: Props) => {
                                 </div>
                                 <div className="  px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 z-30 relative">
 
-                                    <Button onClick={onClose} title='See Prices' className='mx-auto' size='lg' />
+                                    <Button onClick={onClose} title='Message Us' className='mx-auto' size='md' />
                                 </div>
                             </Dialog.Panel>
                         </Transition.Child>

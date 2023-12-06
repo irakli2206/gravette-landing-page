@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ArrowButton, Button } from '../Buttons'
 import Modal from '../Modal'
 import OfferModal from './OfferModal'
+import classNames from 'classnames'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
@@ -37,7 +38,7 @@ const Hero = () => {
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center" onClick={() => setOfferModalOpen(true)}>
                         <div className="relative rounded-full px-3 py-1 text-sm leading-6 transition text-gray-300 ring-1 ring-indigo-500/30 hover:ring-indigo-500/50 bg-indigo-500 bg-opacity-10">
                             Don't miss our special referral offer.{' '}
-                            <div   className="font-semibold text-indigo-400 inline cursor-pointer">
+                            <div className="font-semibold text-indigo-400 inline cursor-pointer">
                                 <span className="absolute inset-0" aria-hidden="true" />
                                 Read more <span aria-hidden="true">&rarr;</span>
                             </div>
@@ -50,15 +51,20 @@ const Hero = () => {
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-300">
                             Crafting digital experiences that inspire and engage.
- 
+
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <a
                                 href="#"
                             >
-                                <Button title='Message Us' size='xl' onClick={() => { }} />
+                                {/* <Button title='Message Us' size='xl' onClick={() => { }} /> */}
+                                <div className={classNames('w-44 h-full shadow-button hover:shadow-button-hover  bg-indigo-600 font-medium text-sm text-center transition rounded-md py-2 mb-auto cursor-pointer pointer-events-auto hover:bg-indigo-500', {
+
+                                })}>
+                                    Message Us
+                                </div>
                             </a>
-                            <a href="#" >
+                            <a href="#"  >
                                 <ArrowButton title='Learn More' />
                             </a>
                         </div>
