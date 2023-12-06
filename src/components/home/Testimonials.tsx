@@ -54,15 +54,15 @@ const Testimonials = () => {
     ]
 
     return (
-        <div className='w-full py-24 mx-auto'>
+        <div className='w-full py-24 mx-auto px-4'>
             <div className='flex flex-col max-w-4xl items-center text-center mx-auto'>
                 <h3 className='text-md font-medium text-indigo-400'>Testimonials</h3>
                 <h1 className='text-5xl font-semibold mt-3 bg-clip-text text-transparent bg-gradient-to-b from-white from-50% to-zinc-300'>These businesses leveled up their online presence thanks to Gravette. Here's what they have to say.</h1>
             </div>
-            <div className='relative max-w-screen-2xl mx-auto px-4'>
+            <div className='relative max-w-screen-2xl mx-auto '>
                 <div className="absolute bg-gradient-to-b from-transparent to-gray-900 from-40% to-90%  z-50 w-full h-full pointer-events-none"></div>
-                <div className='grid grid-cols-4 grid-flow-col  relative gap-8 mt-16 bottom-4 z-10'>
-                    <div className="  col-span-2 row-end-1 col-start-2">
+                <div className='grid grid-cols-2 xl:grid-cols-4 xl:grid-flow-col  relative gap-8 mt-16 bottom-4 z-10'>
+                    <div className="  col-span-2 row-end-1 col-start-1 xl:col-start-2">
                         <Testimonial {...testimonialData[0]} isMain={true} />
                     </div>
 

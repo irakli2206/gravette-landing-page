@@ -3,6 +3,7 @@ import { ArrowButton, Button } from '../Buttons'
 import Modal from '../Modal'
 import OfferModal from './OfferModal'
 import classNames from 'classnames'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
@@ -65,7 +66,24 @@ const Hero = () => {
                                 </div>
                             </a>
                             <a href="#"  >
-                                <ArrowButton title='Learn More' />
+                                <div className={classNames('transition text-sm text-white font-medium flex gap-2.5 items-center group ', {
+
+                                })}>
+                                    <h1>Learn More</h1>
+                                    <div className='w-5 h-7 rounded-full border-white border-2'>
+                                        <motion.div className='w-1 h-1 rounded-full bg-white mx-auto mt-1.5'
+                                            animate={{
+                                                y:[0, 3, 0],
+                                                // opacity: [1, 0, 1]
+                                             }}
+                                             transition={{
+                                                repeat: Infinity,
+                                                delay: 1,
+                                                repeatDelay: 1  
+                                             }}
+                                        ></motion.div>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                     </div>

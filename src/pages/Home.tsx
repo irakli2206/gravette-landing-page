@@ -6,14 +6,19 @@ import CTA from '../components/home/CTA'
 import Testimonials from '../components/home/Testimonials'
 import Modal from '../components/Modal'
 import Features from '../components/home/Features'
+import { Element } from 'react-scroll'
 
 const Home = () => {
   return (
     <div className='bg-gray-900'>
       <Hero />
       <Features />
-      <Testimonials />
-      <Pricing />
+      <Element name='testimonials'>
+        <Testimonials />
+      </Element>
+      <Element name='pricing'>
+        <Pricing />
+      </Element>
       <CTA />
     </div>
   )
