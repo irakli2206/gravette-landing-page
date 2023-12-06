@@ -6,7 +6,7 @@ import { Link as ScrollLink } from 'react-scroll'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
-
+ 
     return (
         <>
             <OfferModal isOpen={offerModalOpen} onClose={() => setOfferModalOpen(false)} />
@@ -72,14 +72,14 @@ const Hero = () => {
                                     <div className='w-5 h-7 rounded-full border-white border-2'>
                                         <motion.div className='w-1 h-1 rounded-full bg-white mx-auto mt-1.5'
                                             animate={{
-                                                y:[0, 3, 0],
+                                                y: [0, 3, 0],
                                                 // opacity: [1, 0, 1]
-                                             }}
-                                             transition={{
+                                            }}
+                                            transition={{
                                                 repeat: Infinity,
                                                 delay: 1,
-                                                repeatDelay: 1  
-                                             }}
+                                                repeatDelay: 1
+                                            }}
                                         ></motion.div>
                                     </div>
                                 </div>
