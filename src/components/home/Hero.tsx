@@ -4,6 +4,7 @@ import Modal from '../Modal'
 import OfferModal from './OfferModal'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
+import { Link as ScrollLink } from 'react-scroll'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
@@ -65,8 +66,8 @@ const Hero = () => {
                                     Message Us
                                 </div>
                             </a>
-                            <a href="#"  >
-                                <div className={classNames('transition text-sm text-white font-medium flex gap-2.5 items-center group ', {
+                            <ScrollLink smooth={true} to="features"  >
+                                <div className={classNames('transition cursor-pointer text-sm text-white font-medium flex gap-2.5 items-center group ', {
 
                                 })}>
                                     <h1>Learn More</h1>
@@ -84,7 +85,7 @@ const Hero = () => {
                                         ></motion.div>
                                     </div>
                                 </div>
-                            </a>
+                            </ScrollLink>
                         </div>
                     </div>
                 </div>
