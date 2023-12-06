@@ -1,6 +1,6 @@
 
 import { Button } from '../Buttons'
-import Chart from '../../assets/cta.svg'
+import Chart from '../../assets/CTA.svg'
 
 const CTA = () => {
     return (
