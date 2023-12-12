@@ -1,5 +1,5 @@
 
-import { Button } from '../Buttons'
+import { Button, TransparentButton } from '../Buttons'
 import Chart from '../../assets/CTA.svg'
 
 const CTA = () => {
@@ -11,7 +11,7 @@ const CTA = () => {
                         <h2 className="text-5xl font-semibold">Give your business the competitive <br /> edge with <span className=' drop-shadow-glow shadow-indigo-500  '>Gravette</span>'s solutions  </h2>
                         <p className="mt-6 text-gray-300">Start upgrading your online  presence today!</p>
                         <div className="mt-10">
-                            <Button title='Message Us' className='w-fit mr-auto' size='xl' onClick={() => { }} />
+                            <TransparentButton title='Message Us' className='w-fit mr-auto' size='xl' onClick={() => { }} />
                         </div>
                     </div>
                 </div>

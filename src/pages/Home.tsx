@@ -5,10 +5,12 @@ import CTA from '../components/home/CTA'
 import Testimonials from '../components/home/Testimonials'
 import Features from '../components/home/Features'
 import { Element } from 'react-scroll'
+import { ScrollRestoration } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div className='bg-gray-900'>
+      <ScrollRestoration />
       <Hero />
       <Element name='features'>
         <Features />
