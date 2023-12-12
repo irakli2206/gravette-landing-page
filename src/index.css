@@ -46,7 +46,7 @@
 
 .contact-bg-cloud {
   top: calc(50% - 7rem);
-  left: max(-14rem,calc(100% - 39rem));
+  left: max(-14rem, calc(100% - 39rem));
   --tw-blur: blur(64px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -65,3 +65,5 @@
     left: max(-14rem, calc(100% - 59rem));
   }
 }
+
+ 

@@ -3,6 +3,7 @@ import OfferModal from './OfferModal'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
 import { Link as ScrollLink } from 'react-scroll'
+import { Button, TransparentButton } from '../Buttons'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
@@ -57,12 +58,12 @@ const Hero = () => {
                             <a
                                 href="#"
                             >
-                                {/* <Button title='Message Us' size='xl' onClick={() => { }} /> */}
-                                <div className={classNames('w-44 h-full shadow-button hover:shadow-button-hover  bg-indigo-600 font-medium text-sm text-center transition rounded-md py-2 mb-auto cursor-pointer pointer-events-auto hover:bg-indigo-500', {
+                                <TransparentButton title='Message Us' size='lg' onClick={() => { }} />
+                                {/* <div className={classNames('w-44 h-full shadow-button hover:shadow-button-hover  bg-indigo-600 font-medium text-sm text-center transition rounded-md py-2 mb-auto cursor-pointer pointer-events-auto hover:bg-indigo-500', {
 
                                 })}>
                                     Message Us
-                                </div>
+                                </div> */}
                             </a>
                             <ScrollLink smooth={true} to="features"  >
                                 <div className={classNames('transition cursor-pointer text-sm text-white font-medium flex gap-2.5 items-center group ', {

@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import Logo from '../assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
-import { Button } from './Buttons'
+import { Button, TransparentButton } from './Buttons'
 import { Link as ScrollLink } from 'react-scroll';
 
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
-                        <Button title='Message Us' size='sm' onClick={() => { }} />
+                        <TransparentButton glowClassName='bg-transparent-button-sm' title='Message Us' size='md' onClick={() => { }} />
                     </Link>
                     {/* <a href="#" className="text-sm font-semibold leading-6  flex gap-2">
                         Schedule <AppIcon name='arrow-right' />
