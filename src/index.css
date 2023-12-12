@@ -14,64 +14,6 @@
 
 
 
-.rbc-label {
-
-  @apply text-gray-300 text-sm
-}
-
-/* .rbc-time-content>*+*>* {
-  @apply !border-gray-700
-} */
-
-/* .rbc-time-slot {
-  @apply !border-gray-900
-} */
-
-.rbc-calendar * {
-  @apply !border-gray-700
-}
-
-.rbc-allday-cell {
-  @apply hidden
-}
-
-.rbc-header {
-  @apply border-0
-}
-
-.rbc-time-content {
-  @apply !border-0
-}
-
-.rbc-day-slot .rbc-time-slot {
-  @apply !border-t-0
-}
-
-.rbc-header {
-  @apply !py-2 !font-normal !text-xs
-}
-
-.rbc-time-header-content {
-  @apply shadow-lg shadow-gray-950
-}
-
-.rbc-today {
-  @apply !bg-gray-700
-}
-
-.rbc-off-range-bg {
-  @apply !bg-gray-950
-}
-
-.rbc-date-cell {
-  @apply !text-left px-2
-}
-
-.rbc-button-link {
-  @apply text-xs mr-auto
-}
-
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -92,3 +34,34 @@
   height: 100%;
   object-fit: cover;
 } */
+
+.contact-bg-grid {
+  opacity: 0.8;
+  background-image: linear-gradient(#374151 2px, transparent 2px), linear-gradient(to right, #374151 2px, #111827 2px);
+  background-size: 200px 200px;
+  -webkit-mask-image: radial-gradient(100% 100% at top right, white, transparent);
+  mask-image: radial-gradient(100% 100% at top right, white, transparent);
+  @apply bg-gray-900
+}
+
+.contact-bg-cloud {
+  top: calc(50% - 7rem);
+  left: max(-14rem,calc(100% - 39rem));
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  position: absolute;
+}
+
+.contact-bg-cloud-content {
+  clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%);
+  opacity: 0.2;
+  background-image: linear-gradient(to bottom right, #80caff, #4f46e5);
+}
+
+@media(min-width: 1024px) {
+  .contanct-bg-cloud {
+    top: calc(50% - 7rem);
+    left: max(-14rem, calc(100% - 59rem));
+  }
+}

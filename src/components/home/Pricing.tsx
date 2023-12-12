@@ -39,20 +39,20 @@ const Pricing = () => {
                 </RadioGroup>
 
                 {pricingType == 'design' && <div className='w-full gap-16 flex flex-col justify-between items-center mt-12 lg:flex-row'>
-                    <PricingCard isMain={false} type='Brand Identity Design' desc={`A memorable and eye-catching logo to catch the customer's attention.`} price={120}
+                    <PricingCard isMain={false} type='Brand Identity Design' desc={`A memorable and eye-catching logo to catch the customer's attention.`} price={500}
                         features={['Design Consultation', 'Design Process Overview', 'Logo Pattern Exploration', 'WIP Updates']} timeUnit='hour' buttonAction={() => { }}
                     />
-                    <PricingCard isMain={true} type='UI/UX Design' desc='Clean and aesthetic UI with smooth user-friendly UX.' price={480}
+                    <PricingCard isMain={true} type='UI/UX Design' desc='Clean and aesthetic UI with smooth user-friendly UX.' price={1800}
                         features={['UI Template Selection', 'UI Detail Overview', 'UX Overview', 'WIP Updates']} timeUnit='trade' buttonAction={() => { }} />
 
                 </div>}
 
 
                 {pricingType == 'development' && <div className='w-full gap-16 flex flex-col justify-between items-center mt-12 lg:flex-row'>
-                    <PricingCard isMain={true} type='Landing Page' desc={`Create a swift, high-performing, and modern website to elevate your enterprise's professional image.`} price={120}
+                    <PricingCard isMain={true} type='Landing Page' desc={`Create a swift, high-performing, and modern website to elevate your enterprise's professional image.`} price={2400}
                         features={['Includes UI/UX Designing', 'Smooth Animations', 'Effortless Deployment', 'Rapid Development Solutions']} timeUnit='hour' buttonAction={() => { }}
                     />
-                    <PricingCard isMain={false} type='Full-Stack Project' desc='Integrate both frontend and backend technologies seamlessly in a database-driven, complex project.' price={480}
+                    <PricingCard isMain={false} type='Full-Stack Project' desc='Integrate both frontend and backend technologies seamlessly in a database-driven, complex project.' price={5000}
                         features={['End-to-End Digital Solutions', 'Comprehensive Digital Architecture', 'From Concept to Code', 'Intuitive User Interface']} timeUnit='trade' buttonAction={() => { }} />
                 </div>
                 }

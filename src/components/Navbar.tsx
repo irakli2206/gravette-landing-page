@@ -1,11 +1,11 @@
-import {  useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import Logo from '../assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
 import { Button } from './Buttons'
-import { Link as ScrollLink} from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 let navLinks = [
@@ -59,14 +59,14 @@ const Navbar = () => {
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link to='schedule' >
+                    <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
                         <Button title='Message Us' size='sm' onClick={() => { }} />
                     </Link>
                     {/* <a href="#" className="text-sm font-semibold leading-6  flex gap-2">
                         Schedule <AppIcon name='arrow-right' />
                     </a> */}
                 </div>
-                <div className='w-full h-[1px]  absolute bottom-0' style={{background: "radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)"}}></div>
+                <div className='w-full h-[1px]  absolute bottom-0' style={{ background: "radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)" }}></div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-50" />

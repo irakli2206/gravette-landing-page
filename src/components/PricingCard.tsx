@@ -30,7 +30,7 @@ const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceO
             </div>
 
             <div className='flex gap-2 items-center mt-6'>
-                <h1 className='text-4xl font-bold '>${price}</h1>
+                <h1 className='text-4xl font-bold '>${price}+</h1>
                 {/* <p className='text-gray-300 text-md h-fit mt-auto mb-1'>/{timeUnit}</p> */}
             </div>
 
@@ -48,7 +48,7 @@ const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceO
             <div onClick={buttonAction} className={classNames('  bg-indigo-600 font-medium text-sm text-center transition rounded-md py-2 mt-12 mb-auto cursor-pointer pointer-events-auto hover:bg-indigo-500', {
 
             })}>
-                Schedule
+                Get In Touch
             </div>
 
         </div>
