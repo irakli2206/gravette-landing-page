@@ -21,7 +21,7 @@ const CTA = () => {
                     <img src={Chart} className='h-full object-cover object-left ' />
                 </div>
             </div>
-            <svg viewBox="0 0 1024 1024" className="absolute isolate z-100 left-0 right-0 -bottom-72 mx-auto max-w-screen-lg translate-y-1/2 blur-3xl opacity-30" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#8d958450-c69f-4251-94bc-4e091a323369)" fill-opacity="0.7"></circle><defs><radialGradient id="8d958450-c69f-4251-94bc-4e091a323369"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg>
+             <div className="absolute w-full h-[800px]  -bottom-[550px] left-1/2 -translate-x-1/2 bg-cta"></div>
         </div>
     )
 }

@@ -45,7 +45,7 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-300">
                         <h1 className="text-4xl font-bold tracking-tight  sm:text-6xl">
                             Elevate Your Brand with Clean Web Design.
 

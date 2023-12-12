@@ -19,6 +19,7 @@ export default {
       backgroundImage: {
         "transparent-button": "radial-gradient( 50% 45px, #3830a3,  transparent 100%)",
         "transparent-button-sm": "radial-gradient( 80% 45px, #3830a3, transparent 100%)",
+        "cta": "radial-gradient(500px 400px, #3830a3, transparent 100%)",
       },
 
       dropShadow: {
