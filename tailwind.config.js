@@ -17,8 +17,8 @@ export default {
         'button-hover': 'inset 0px 0px 6px 0px rgba(255, 255, 255, 0.75)',
       },
       backgroundImage: {
-        "transparent-button": "radial-gradient( 50% 45px, #3830a3,  transparent 100%)",
-        "transparent-button-sm": "radial-gradient( 80% 45px, #3830a3, transparent 100%)",
+        "transparent-button": "radial-gradient(100% 40px, #3830a3,  transparent 100%)",
+        "transparent-button-sm": "radial-gradient(100% 40px, #3830a3, transparent 100%)",
         "cta": "radial-gradient(500px 400px, #3830a3, transparent 100%)",
       },
 
