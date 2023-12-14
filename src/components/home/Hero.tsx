@@ -3,7 +3,7 @@ import OfferModal from './OfferModal'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
 import { Link as ScrollLink } from 'react-scroll'
-import { Button, TransparentButton } from '../Buttons'
+import {  TransparentButton } from '../Buttons'
 import { Link } from 'react-router-dom'
 
 const Hero = () => {

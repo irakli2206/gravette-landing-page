@@ -1,7 +1,5 @@
 
-import { FC, useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
+import { FC } from 'react'
 import classNames from 'classnames'
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { MdOutlinePhone } from "react-icons/md";
@@ -9,11 +7,11 @@ import { AiOutlineMail } from "react-icons/ai";
 import { Field, FieldProps, Form, Formik } from 'formik';
 import * as Yup from 'yup'
 import '../../index.css'
-import { Button, TransparentButton } from '../Buttons';
+import { TransparentButton } from '../Buttons';
 import { IoWarning } from "react-icons/io5";
 
 export default function Contact() {
-    const [agreed, setAgreed] = useState(false)
+    // const [agreed, setAgreed] = useState(false)
 
     let contactData = [
         {
@@ -49,9 +47,9 @@ export default function Contact() {
                     <div className="flex flex-col gap-4 mt-10 z-50 relative">
                         {contactData.map((contact, i) => {
                             let clickable = i !== 0
-                            
-                             return (
-                                <a href={contact.link} key={i}  className={classNames('flex gap-4 relative z-90 duration-200  text-gray-300', {
+
+                            return (
+                                <a href={contact.link} key={i} className={classNames('flex gap-4 relative z-90 duration-200  text-gray-300', {
                                     "cursor-pointer hover:text-white": clickable
                                 })}>
                                     {contact.icon}
@@ -82,7 +80,7 @@ export default function Contact() {
                             console.log(values)
                         }}
                     >
-                        {({ values, errors }) => (
+                        {() => (
                             <Form className='flex flex-col gap-6 '>
                                 <div className="flex gap-8 w-full">
                                     <Field name="firstName"

@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import Logo from '../assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
-import { Button, TransparentButton } from './Buttons'
+import { TransparentButton } from './Buttons'
 import { Link as ScrollLink } from 'react-scroll';
 
 

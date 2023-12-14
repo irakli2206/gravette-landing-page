@@ -1,4 +1,3 @@
-import React from 'react'
 import ContactSection from '../components/home/Contact'
 import { ScrollRestoration } from 'react-router-dom'
 

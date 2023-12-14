@@ -1,5 +1,5 @@
 
-import { Button, TransparentButton } from '../Buttons'
+import { TransparentButton } from '../Buttons'
 import Chart from '../../assets/CTA.svg'
 import { Link } from 'react-router-dom'
 
