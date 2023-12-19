@@ -11,9 +11,8 @@ type Props = {
 }
 
 const Testimonial = ({ author, testimonial, logo, socialsLink, isMain = false }: Props) => {
-    console.log(logo)
-    return (
-        <div className={classNames('rounded-2xl h-fit bg-gray-800 flex flex-col border drop-shadow-[0px_0px_10px_rgba(0,0,0,0.4)] border-gray-700', {
+     return (
+        <div  className={classNames('rounded-2xl h-fit bg-gray-800 flex flex-col border drop-shadow-[0px_0px_10px_rgba(0,0,0,0.4)] border-gray-700', {
             'col-span-2 row-span-2': isMain
         })}>
             <p className={classNames('text-lg p-6', {

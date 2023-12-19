@@ -2,6 +2,7 @@ import { Transition, Dialog } from '@headlessui/react'
 import { Fragment } from 'react'
 import { Button } from '../Buttons'
 import { GiReceiveMoney } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 type Props = {
     isOpen: boolean
@@ -60,10 +61,10 @@ const OfferModal = ({ isOpen, onClose }: Props) => {
                                     </div>
 
                                 </div>
-                                <div className="  px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 z-30 relative">
+                                <Link to='/contact' className="  px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 z-30 relative">
 
                                     <Button onClick={onClose} title='Message Us' className='mx-auto' size='md' />
-                                </div>
+                                </Link>
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>

@@ -54,7 +54,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <div className='w-full py-24 mx-auto px-4'>
+        <div className='w-full py-24 mx-auto px-4' >
             <div className='flex flex-col max-w-4xl items-center text-center mx-auto'>
                 <h3 className='text-md font-medium text-indigo-400'>Testimonials</h3>
                 <h1 className='text-5xl font-semibold mt-3 bg-clip-text text-transparent bg-gradient-to-b from-white from-50% to-zinc-300'>These businesses leveled up their online presence thanks to Gravette. Here's what they have to say.</h1>

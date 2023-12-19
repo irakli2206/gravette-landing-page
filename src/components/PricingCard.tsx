@@ -38,7 +38,7 @@ const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceO
 
 
             <ul className="flex flex-col gap-4 mt-8">
-                {features.map(feature => <div className="flex gap-2">
+                {features.map(feature => <div className="flex gap-2" key={feature}>
                     <AppIcon name='check' className='w-5 h-5 text-indigo-300' />
                     <p className="text-indigo-100 text-sm h-fit my-auto">{feature}</p>
                 </div>)}

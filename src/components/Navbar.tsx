@@ -5,7 +5,6 @@ import classNames from 'classnames'
 import Logo from '../assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
 import { TransparentButton } from './Buttons'
-import { Link as ScrollLink } from 'react-scroll';
 
 
 let navLinks = [
@@ -24,6 +23,7 @@ const Navbar = () => {
     useEffect(() => {
         setCurrentPath(path)
     }, [path])
+
 
     return (
         <header className="fixed inset-x-0 top-0 z-[9999] font-sans backdrop-blur-md ">
@@ -50,12 +50,12 @@ const Navbar = () => {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navLinks.map((item) => (
-                        <ScrollLink key={item.name} smooth={true} to={item.path} className={classNames("cursor-pointer text-sm relative text-gray-300 hover:text-white duration-150 font-semibold  leading-6   ", {
+                        <Link key={item.name} to={'/#' + item.path} id={item.path} className={classNames("cursor-pointer text-sm relative text-gray-300 hover:text-white duration-150 font-semibold  leading-6   ", {
                             // 'before:bg-indigo-700 before:absolute before:w-[150%] before:h-[120%] before:rounded-md before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:z-[-1]': item.current
                             '!text-white drop-shadow-glow': currentPath == item.path
                         })}>
                             {item.name}
-                        </ScrollLink>
+                        </Link>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">

@@ -3,8 +3,8 @@ import OfferModal from './OfferModal'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
 import { Link as ScrollLink } from 'react-scroll'
-import {  TransparentButton } from '../Buttons'
-import { Link } from 'react-router-dom'
+import { TransparentButton } from '../Buttons'
+import { Link  } from 'react-router-dom'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
@@ -56,14 +56,12 @@ const Hero = () => {
 
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <a
-                                href="#"
-                            >
-                                <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
-                                    <TransparentButton title='Message Us' size='lg' onClick={() => { }} />
-                                </Link>
-                
-                            </a>
+
+                            <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
+                                <TransparentButton title='Message Us' size='lg' onClick={() => { }} />
+                            </Link>
+
+
                             <ScrollLink smooth={true} to="features"  >
                                 <div className={classNames('transition cursor-pointer text-sm text-white font-medium flex gap-2.5 items-center group ', {
 
