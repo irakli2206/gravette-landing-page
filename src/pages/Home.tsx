@@ -4,9 +4,8 @@ import Pricing from '../components/home/Pricing'
 import CTA from '../components/home/CTA'
 import Testimonials from '../components/home/Testimonials'
 import Features from '../components/home/Features'
-import { Element } from 'react-scroll'
 import { ScrollRestoration, useLocation } from 'react-router-dom'
-import { LegacyRef, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 const Home = () => {
   const location = useLocation()
