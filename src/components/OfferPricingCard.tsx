@@ -10,7 +10,7 @@ const OfferPricingCard = ({ className }: Props) => {
         'UI/UX Design',
         'Brand Identity Design',
         'Web Development',
-        'DNS Management & Website Hosting',
+        'DNS & Hosting',
     ]
 
     return (
@@ -39,7 +39,7 @@ const OfferPricingCard = ({ className }: Props) => {
                     </ul>
                 </div>
                 <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                    <div className="transition rounded-2xl bg-indigo-500 bg-opacity-10 ring-1 hover:pointer-events-none   ring-indigo-500/30 hover:ring-indigo-500/50 py-10 text-center lg:flex lg:flex-col lg:justify-center lg:py-16">
+                    <div className="transition h-full rounded-2xl bg-indigo-500 bg-opacity-10 ring-1 hover:pointer-events-none   ring-indigo-500/30 hover:ring-indigo-500/50 py-10 text-center lg:flex lg:flex-col lg:justify-center lg:py-16">
                         <div className="mx-auto max-w-xs px-8">
                             <p className="text-base font-semibold text-gray-300">Starting from</p>
                             <p className="mt-6 flex items-baseline justify-center gap-x-2">

@@ -29,7 +29,7 @@ const Features = () => {
                     <div className="lg:pr-8 lg:pt-4">
                         <div className="lg:max-w-lg">
                             <h2 className="text-md font-medium text-indigo-400">Why Us</h2>
-                            <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">Flawless efficiency</p>
+                            <p className="mt-2 text-3xl font-semibold tracking-tight  sm:text-4xl">Flawless efficiency</p>
                             <p className="mt-6 text-lg leading-8 text-gray-300">
                                 Discover the power of precision, innovation, and visual brilliance
                             </p>

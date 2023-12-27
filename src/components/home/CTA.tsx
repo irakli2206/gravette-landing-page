@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 const CTA = () => {
     return (
         <div className="relative  overflow-hidden pt-24 pb-12">
-            <div className='flex justify-between'>
-                <div className="flex flex-col items-center mx-auto py-64 max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 z-20">
+            <div className='flex flex-col md:flex-row justify-between'>
+                <div className="flex flex-col items-center mx-auto py-24 md:py-64 max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 z-20">
                     <div className="text-left">
-                        <h2 className="text-5xl font-semibold">Give your business the competitive <br /> edge with <span className=' drop-shadow-glow shadow-indigo-500  '>Gravette</span>'s solutions  </h2>
+                        <h2 className="text-4xl md:text-5xl font-semibold">Give your business the competitive <br /> edge with <span className=' drop-shadow-glow shadow-indigo-500  '>Gravette</span>'s solutions  </h2>
                         <p className="mt-6 text-gray-300">Start upgrading your online  presence today!</p>
                         <div className="mt-10">
                             <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
@@ -19,7 +19,7 @@ const CTA = () => {
                     </div>
                 </div>
 
-                <div className='relative h-[550px] -mr-48 my-auto z-30 '>
+                <div className='relative h-[400px] md:h-[550px] left-20 md:left-0 -mr-48 my-auto z-30 '>
                     <div className='w-full h-full bg-gradient-to-r from-transparent to-gray-900 to-75% absolute '></div>
                     <img src={Chart} className='h-full object-cover object-left ' />
                 </div>

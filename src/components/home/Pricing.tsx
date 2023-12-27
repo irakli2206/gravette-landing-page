@@ -16,7 +16,7 @@ const Pricing = () => {
         <div className='mx-auto py-24 max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 flex flex-col justify-center items-center'>
             <div className='flex flex-col max-w-4xl items-center text-center'>
                 <h3 className='text-md font-medium text-indigo-400'>Pricing</h3>
-                <h1 className='text-5xl font-semibold mt-3'>Meant for every kind of customer</h1>
+                <h1 className='text-3xl sm:text-5xl font-semibold mt-3'>Meant for every kind of customer</h1>
                 <h2 className='text-lg text-gray-300 mt-6'>Choose an affordable plan that's packed with the best features for engaging your audience, creating customer loyalty, and driving sales.</h2>
             </div>
             <div className='flex flex-col  w-full'>
