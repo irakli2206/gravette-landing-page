@@ -9,6 +9,7 @@ import * as Yup from 'yup'
 import '../../index.css'
 import { TransparentButton } from '../Buttons';
 import { IoWarning } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 export default function Contact() {
     // const [agreed, setAgreed] = useState(false)
@@ -49,12 +50,12 @@ export default function Contact() {
                             let clickable = i !== 0
 
                             return (
-                                <a href={contact.link} key={i} className={classNames('flex gap-4 relative z-90 duration-200  text-gray-300', {
+                                <Link to={contact.link!} key={i} className={classNames('flex w-fit gap-4 relative z-90 duration-200  text-gray-300', {
                                     "cursor-pointer hover:text-white": clickable
                                 })}>
                                     {contact.icon}
                                     <p className=' '>{contact.text}</p>
-                                </a>
+                                </Link>
                             )
                         })}
                     </div>
@@ -66,7 +67,7 @@ export default function Contact() {
                     </div>
                 </div>
 
-                <div className="flex-1 h-full  py-24 lg:py-40 px-8 bg-gray-900 ">
+                <div className="flex-1 h-full w-full py-24 lg:py-40 px-8 bg-gray-900 ">
                     <Formik
                         validationSchema={schema}
                         initialValues={{

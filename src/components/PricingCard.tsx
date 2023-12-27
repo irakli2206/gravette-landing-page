@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import AppIcon from './AppIcon'
 import classNames from 'classnames'
 
@@ -45,11 +46,11 @@ const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceO
 
 
             </ul>
-            <div onClick={buttonAction} className={classNames('  bg-indigo-600 font-medium text-sm text-center transition rounded-md py-2 mt-12 mb-auto cursor-pointer pointer-events-auto hover:bg-indigo-500', {
+            <Link to='contact' onClick={buttonAction} className={classNames('  bg-indigo-600 font-medium text-sm text-center transition rounded-md py-2 mt-12 mb-auto cursor-pointer pointer-events-auto hover:bg-indigo-500', {
 
             })}>
                 Get In Touch
-            </div>
+            </Link>
 
         </div>
     )

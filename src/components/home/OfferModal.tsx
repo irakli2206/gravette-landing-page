@@ -11,11 +11,10 @@ type Props = {
 
 
 const OfferModal = ({ isOpen, onClose }: Props) => {
+
     return (
         <Transition.Root show={isOpen} as={Fragment} >
-            <Dialog as="div" className="relative z-[9999]"
-                // initialFocus={cancelButtonRef}
-
+            <Dialog as="div" className="relative z-[9999] focus-visible:outline-none"
                 onClose={onClose}>
                 <Transition.Child
                     as={Fragment}
