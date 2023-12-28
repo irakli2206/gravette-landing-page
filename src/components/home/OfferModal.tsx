@@ -1,5 +1,5 @@
 import { Transition, Dialog } from '@headlessui/react'
-import { Fragment } from 'react'
+import { Fragment, useRef } from 'react'
 import { Button } from '../Buttons'
 import { GiReceiveMoney } from "react-icons/gi";
 import { Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ type Props = {
 
 
 const OfferModal = ({ isOpen, onClose }: Props) => {
-
+ 
     return (
         <Transition.Root show={isOpen} as={Fragment} >
             <Dialog as="div" className="relative z-[9999] focus-visible:outline-none"
@@ -60,10 +60,12 @@ const OfferModal = ({ isOpen, onClose }: Props) => {
                                     </div>
 
                                 </div>
-                                <Link to='/contact' className="  px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 z-30 relative">
+                                <div className=" px-4 py-3">
+                                    <Link to='/contact' className="w-fit h-fit mx-auto sm:flex sm:flex-row-reverse z-30 relative focus-visible:outline-none" >
 
-                                    <Button onClick={onClose} title='Message Us' className='mx-auto' size='md' />
-                                </Link>
+                                        <Button onClick={onClose} title='Message Us' size='md' />
+                                    </Link>
+                                </div>
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>

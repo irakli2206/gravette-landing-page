@@ -62,7 +62,7 @@ const Testimonials = () => {
             <div className='relative max-w-screen-2xl mx-auto '>
                 <div className="absolute bg-gradient-to-b from-transparent to-gray-900 from-40% to-90%  z-50 w-full h-full pointer-events-none"></div>
                 <div className='grid md:grid-cols-2 xl:grid-cols-4 xl:grid-flow-col  relative gap-8 mt-16 bottom-4 z-10'>
-                    <div className="  col-span-2 row-end-1 col-start-1 xl:col-start-2">
+                    <div className="  sm:col-span-2 row-end-1 col-start-1 xl:col-start-2">
                         <Testimonial {...testimonialData[0]} isMain={true} />
                     </div>
 

@@ -47,15 +47,15 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-300">
-                        <h1 className="text-4xl font-bold tracking-tight  sm:text-6xl">
+                        <motion.h1 className="text-4xl font-bold tracking-tight  sm:text-6xl">
                             Elevate Your Brand with Clean Web Design.
 
-                        </h1>
+                        </motion.h1>
                         <p className="mt-6 text-lg leading-8 text-gray-300">
                             Crafting digital experiences that inspire and engage.
 
                         </p>
-                        <div className="mt-10 flex items-center justify-center gap-x-6">
+                        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-6">
 
                             <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
                                 <TransparentButton title='Message Us' size='lg' onClick={() => { }} />
