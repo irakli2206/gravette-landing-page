@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
-import Logo from '../assets/logo.svg'
+import Logo from '../assets/logo-light.svg'
 import { Link, useLocation } from 'react-router-dom'
 import { TransparentButton } from './Buttons'
 
@@ -24,8 +23,8 @@ const Navbar = () => {
 
 
     return (
-        <header className={classNames("fixed inset-x-0 top-0 z-[9999]  font-sans  ")}>
-            <nav className="flex relative  max-w-screen-xl mx-auto backdrop-blur-md items-center justify-between p-2.5 lg:px-8 " aria-label="Global">
+        <header className={classNames("fixed inset-x-0 top-0 z-[9999]  font-sans  backdrop-blur-md")}>
+            <nav className="flex relative  max-w-screen-xl mx-auto items-center justify-between p-2.5 lg:px-8 " aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link to='/' className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
