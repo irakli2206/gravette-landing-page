@@ -1,12 +1,26 @@
+import { motion } from 'framer-motion'
 import ContactSection from '../components/home/Contact'
 import { ScrollRestoration } from 'react-router-dom'
 
 const Contact = () => {
   return (
-    <div>
+    <motion.div
+      key='contact'
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+
+      }}
+      exit={{
+        opacity: 0,
+
+      }}
+    >
       <ScrollRestoration />
       <ContactSection />
-    </div>
+    </motion.div>
   )
 }
 

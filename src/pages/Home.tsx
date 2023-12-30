@@ -6,6 +6,7 @@ import Testimonials from '../components/home/Testimonials'
 import Features from '../components/home/Features'
 import { ScrollRestoration, useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Home = () => {
   const location = useLocation()
@@ -32,7 +33,20 @@ const Home = () => {
   };
 
   return (
-    <div className='bg-gray-900'>
+
+    <motion.div className='bg-gray-900'
+    key='home'
+    initial={{
+      opacity: 0,
+     }}
+    animate={{
+      opacity: 1,
+     }}
+    exit={{
+      opacity: 0,
+     }}
+
+    >
       <ScrollRestoration />
       <Hero />
       <div id='features' >
@@ -45,7 +59,7 @@ const Home = () => {
         <Pricing />
       </div>
       <CTA />
-    </div>
+    </motion.div>
   )
 }
 
