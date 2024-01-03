@@ -44,7 +44,7 @@ const Testimonial = ({ author, testimonial, logo, socialsLink, isMain = false }:
         <>
 
 
-            <div key={author} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={classNames('relative rounded-2xl  overflow-hidden h-fit bg-indigo-500/10 flex flex-col drop-shadow-[0px_0px_10px_rgba(0,0,0,0.4)]  border border-indigo-700/40 ', {
+            <div key={author} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={classNames('relative rounded-2xl  overflow-hidden h-fit bg-indigo-500/10 flex flex-col drop-shadow-[0px_0px_10px_rgba(0,0,0,0.4)]  border border-indigo-700/30 ', {
                 'col-span-2 row-span-2': isMain
             })} >
                 <div key={author} className={classNames("glow w-[800px] h-[800px] transition-opacity duration-300  absolute z-0", {
@@ -56,7 +56,7 @@ const Testimonial = ({ author, testimonial, logo, socialsLink, isMain = false }:
                         'font-medium text-xl ': isMain,
                         'p-12': isMain
                     })}>{testimonial}</p>
-                    <div className="w-full h-[1px] bg-indigo-700/50"></div>
+                    <div className="w-full h-[1px] bg-indigo-700/30"></div>
                     <div className={classNames('py-3 px-6 text-md text-gray-200 flex justify-between items-center', {
                         'text-lg': isMain,
                     })}>

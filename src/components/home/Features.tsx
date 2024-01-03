@@ -1,5 +1,10 @@
 
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import img1 from '../../assets/why-us-1.svg'
+import img2 from '../../assets/why-us-2.svg'
+import img3 from '../../assets/why-us-3.svg'
+import img4 from '../../assets/why-us-4.svg'
+import { motion } from 'framer-motion'
 
 const Features = () => {
     const features = [
@@ -46,14 +51,108 @@ const Features = () => {
                             </dl>
                         </div>
                     </div>
-                    <img
-                        src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-                        alt="Product screenshot"
-                        className={`w-[48rem] max-w-none  rounded-xl shadow-xl border border-gray-400/10  sm:w-[57rem] md:-ml-4 lg:-ml-0
+                    <div className="my-auto relative">
+                        <motion.img
+                            src={img1}
+                            alt="Product screenshot"
+                            className={`w-[48rem] absolute top-1/2 -translate-y-1/2 max-w-none  rounded-xl shadow-xl border border-gray-400/10  sm:w-[57rem] md:-ml-4 lg:-ml-0
                         z-50`}
-                        width={2432}
-                        height={1442}
-                    />
+                            width={2432}
+                            height={1442}
+                            initial={{
+                                opacity: 0,
+                                x: 20,
+                                y: '-50%'
+                            }}
+                            animate={{
+                                opacity: [null, 1, , 1, 0],
+                                x: [null, 0, 0, 20]
+                            }}
+                            transition={{
+                                times: [0, 0.2, 0.8, 0.9],
+                                duration: 3,
+                                repeatDelay: 9,
+                                repeat: Infinity,
+                            }}
+
+                        />
+                        <motion.img
+                            src={img2}
+                            alt="Product screenshot"
+                            className={`w-[48rem] absolute top-1/2 -translate-y-1/2 max-w-none  rounded-xl shadow-xl border border-gray-400/10  sm:w-[57rem] md:-ml-4 lg:-ml-0
+                        z-50`}
+                            width={2432}
+                            height={1442}
+                            initial={{
+                                opacity: 0,
+                                x: 20,
+                                y: '-50%'
+                            }}
+                            animate={{
+                                opacity: [null, 1, , 1, 0],
+                                x: [null, 0, 0, 20]
+                            }}
+                            transition={{
+                                times: [0, 0.2, 0.8, 0.9],
+                                duration: 3,
+                                delay: 3,
+                                repeatDelay: 9,
+                                repeat: Infinity,
+                            }}
+
+                        />
+                        <motion.img
+                            src={img3}
+                            alt="Product screenshot"
+                            className={`w-[48rem] absolute top-1/2 -translate-y-1/2 max-w-none  rounded-xl shadow-xl border border-gray-400/10  sm:w-[57rem] md:-ml-4 lg:-ml-0
+                        z-50`}
+                            width={2432}
+                            height={1442}
+                            initial={{
+                                opacity: 0,
+                                x: 20,
+                                y: '-50%'
+                            }}
+                            animate={{
+                                opacity: [null, 1, , 1, 0],
+                                x: [null, 0, 0, 20]
+                            }}
+                            transition={{
+                                times: [0, 0.2, 0.8, 0.9],
+                                duration: 3,
+                                delay: 6,
+                                repeatDelay: 9,
+                                repeat: Infinity,
+                            }}
+
+                        />
+                        <motion.img
+                            src={img4}
+                            alt="Product screenshot"
+                            className={`w-[48rem] absolute top-1/2 -translate-y-1/2 max-w-none  rounded-xl shadow-xl border border-gray-400/10  sm:w-[57rem] md:-ml-4 lg:-ml-0
+                        z-50`}
+                            width={2432}
+                            height={1442}
+                            initial={{
+                                opacity: 0,
+                                x: 20,
+                                y: '-50%'
+                            }}
+                            animate={{
+                                opacity: [null, 1, , 1, 0],
+                                x: [null, 0, 0, 20]
+                            }}
+                            transition={{
+                                times: [0, 0.2, 0.8, 0.9],
+                                duration: 3,
+                                delay: 9,
+                                repeatDelay: 9,
+                                repeat: Infinity,
+                            }}
+
+                        />
+                    </div>
+
                 </div>
             </div>
             <style>

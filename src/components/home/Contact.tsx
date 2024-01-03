@@ -139,6 +139,7 @@ const FormInput: FC<FieldProps> = ({
             <label htmlFor={field.name} className="block text-sm font-semibold leading-6 ">
                 {/* @ts-ignore */}
                 {props.label}
+
             </label>
             <div className="mt-2.5">
                 <input

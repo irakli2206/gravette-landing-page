@@ -6,6 +6,7 @@ import CardBG from '../assets/card-bg.svg'
 
 const Changelog = () => {
     const changelogData = [
+
         {
             version: "Version 1.3",
             date: "Nov 25, 2023",
@@ -27,6 +28,10 @@ const Changelog = () => {
             bugfixes: [
                 "Fixed mobile responsiveness issue"
             ]
+        },
+        {
+            date: "Nov 25, 2023",
+            version: "Website Launch"
         },
     ]
 
@@ -70,7 +75,7 @@ const Changelog = () => {
                 </div>
 
 
-                <div className="flex relative z-10 mt-20 max-w-5xl mx-auto justify-between items-center">
+                <div className="flex relative z-10 mt-20 max-w-3xl mx-auto justify-between items-center">
                     <div
                         className="absolute left-0 top-2 h-full border border-gray-500/30 border-dashed "
                     />
@@ -82,7 +87,7 @@ const Changelog = () => {
                                 <div className={classNames("text-sm font-medium", {
                                     'text-gray-400 !font-light': i !== 0
                                 })}>○ &nbsp; {log.date}</div>
-                                <ChangelogCard {...log} />
+                                {log.version && <ChangelogCard {...log} />}
                             </div>
                         })}
                     </div>
