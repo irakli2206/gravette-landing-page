@@ -6,7 +6,7 @@ import Testimonials from '../components/home/Testimonials'
 import Features from '../components/home/Features'
 import { ScrollRestoration, useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 
 const Home = () => {
   const location = useLocation()
