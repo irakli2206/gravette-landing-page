@@ -18,7 +18,6 @@ const Contact = () => {
 
       }}
     >
-      <ScrollRestoration />
       <ContactSection />
     </motion.div>
   )

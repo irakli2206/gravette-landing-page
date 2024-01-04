@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { Variants, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 import { Link } from 'react-router-dom'
@@ -40,13 +41,20 @@ const Testimonial = ({ author, testimonial, logo, socialsLink, isMain = false }:
 
     console.log(isHovering)
 
+    const item = {
+        hidden: { opacity: 0, scale: 0.97 },
+        show: { opacity: 1, scale:1, transition: { delay: Math.random() * 0.5, type: 'spring', velocity: 2, bounce: 0} },
+    }
+
     return (
         <>
 
 
-            <div key={author} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={classNames('relative rounded-2xl  overflow-hidden h-fit bg-indigo-500/10 flex flex-col drop-shadow-[0px_0px_10px_rgba(0,0,0,0.4)]  border border-indigo-700/30 ', {
-                'col-span-2 row-span-2': isMain
-            })} >
+            <motion.div
+                variants={item}
+                key={author} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={classNames('relative rounded-2xl  overflow-hidden h-fit bg-indigo-500/10 flex flex-col drop-shadow-[0px_0px_10px_rgba(0,0,0,0.4)]  border border-indigo-700/30 ', {
+                    'col-span-2 row-span-2': isMain
+                })} >
                 <div key={author} className={classNames("glow w-[800px] h-[800px] transition-opacity duration-300  absolute z-0", {
                     "opacity-0 ": isHovering === false
                 })} style={{ left: `${position.x}px`, top: `${position.y}px`, }}></div>
@@ -69,7 +77,7 @@ const Testimonial = ({ author, testimonial, logo, socialsLink, isMain = false }:
                         </Link>}
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             <style>
                 {`

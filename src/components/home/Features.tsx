@@ -31,7 +31,22 @@ const Features = () => {
         <div className="features overflow-hidden py-24 ">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="lg:pr-8 lg:pt-4">
+                    <motion.div className="lg:pr-8 lg:pt-4"
+                        initial={{
+                            opacity: 0
+                        }}
+                        whileInView={{
+                            opacity: [0, 1],
+                            x: [-20, 0],
+                            transition: {
+                                delay: 0.3,
+                                type: 'spring',
+                                bounce: 0,
+
+                            }
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         <div className="lg:max-w-lg">
                             <h2 className="text-md font-medium text-indigo-400">Why Us</h2>
                             <p className="mt-2 text-3xl font-semibold tracking-tight  sm:text-4xl">Flawless efficiency</p>
@@ -50,8 +65,23 @@ const Features = () => {
                                 ))}
                             </dl>
                         </div>
-                    </div>
-                    <div className="my-auto relative">
+                    </motion.div>
+                    <motion.div
+                        initial={{
+                            opacity: 0
+                        }}
+                        whileInView={{
+                            opacity: [0, 1],
+                            x: [20, 0],
+                            transition: {
+                                delay: 0.3,
+                                type: 'spring',
+                                bounce: 0,
+
+                            }
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        className="my-auto relative md:w-full md:h-full !h-[500px]" >
                         <motion.img
                             src={img1}
                             alt="Product screenshot"
@@ -66,12 +96,12 @@ const Features = () => {
                             }}
                             animate={{
                                 opacity: [null, 1, , 1, 0],
-                                x: [null, 0, 0, 20]
+                                x: [null, 0, 0, 100]
                             }}
                             transition={{
-                                times: [0, 0.2, 0.8, 0.9],
-                                duration: 3,
-                                repeatDelay: 9,
+                                times: [0, 0.1, 0.8, 0.9],
+                                duration: 4,
+                                repeatDelay: 12,
                                 repeat: Infinity,
                             }}
 
@@ -90,14 +120,15 @@ const Features = () => {
                             }}
                             animate={{
                                 opacity: [null, 1, , 1, 0],
-                                x: [null, 0, 0, 20]
+                                x: [null, 0, 0, 100]
                             }}
                             transition={{
-                                times: [0, 0.2, 0.8, 0.9],
-                                duration: 3,
-                                delay: 3,
-                                repeatDelay: 9,
+                                times: [0, 0.1, 0.8, 0.9],
+                                duration: 4,
+                                delay: 4,
+                                repeatDelay: 12,
                                 repeat: Infinity,
+
                             }}
 
                         />
@@ -115,14 +146,15 @@ const Features = () => {
                             }}
                             animate={{
                                 opacity: [null, 1, , 1, 0],
-                                x: [null, 0, 0, 20]
+                                x: [null, 0, 0, 100]
                             }}
                             transition={{
-                                times: [0, 0.2, 0.8, 0.9],
-                                duration: 3,
-                                delay: 6,
-                                repeatDelay: 9,
+                                times: [0, 0.1, 0.8, 0.9],
+                                duration: 4,
+                                delay: 8,
+                                repeatDelay: 12,
                                 repeat: Infinity,
+
                             }}
 
                         />
@@ -140,18 +172,18 @@ const Features = () => {
                             }}
                             animate={{
                                 opacity: [null, 1, , 1, 0],
-                                x: [null, 0, 0, 20]
+                                x: [null, 0, 0, 100]
                             }}
                             transition={{
-                                times: [0, 0.2, 0.8, 0.9],
-                                duration: 3,
-                                delay: 9,
-                                repeatDelay: 9,
+                                times: [0, 0.1, 0.8, 0.9],
+                                duration: 4,
+                                delay: 12,
+                                repeatDelay: 12,
                                 repeat: Infinity,
                             }}
 
                         />
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

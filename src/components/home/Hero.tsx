@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { motion } from 'framer-motion'
 import { Link as ScrollLink } from 'react-scroll'
 import { TransparentButton } from '../Buttons'
-import { Link  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     const [offerModalOpen, setOfferModalOpen] = useState(false)
@@ -37,7 +37,17 @@ const Hero = () => {
                         </a>
                     </div>
                 </div> */}
-                    <div className="hidden sm:mb-8 sm:flex sm:justify-center" onClick={() => setOfferModalOpen(true)}>
+                    <motion.div className="hidden sm:mb-8 sm:flex sm:justify-center" onClick={() => setOfferModalOpen(true)}
+                        animate={{
+                            opacity: [0, 1],
+                            x: [-20, 0],
+                            transition: {
+                                delay: 0.3,
+                                type: 'spring',
+                                bounce: 0
+                            }
+                        }}
+                    >
                         <div className="relative rounded-full px-3 py-1 text-sm leading-6 transition text-gray-300 ring-1 ring-indigo-500/30 hover:ring-indigo-500/50 bg-indigo-500 bg-opacity-10">
                             Don't miss our special referral offer.{' '}
                             <div className="font-semibold text-indigo-400 inline cursor-pointer">
@@ -45,17 +55,47 @@ const Hero = () => {
                                 Read more <span aria-hidden="true">&rarr;</span>
                             </div>
                         </div>
-                    </div>
-                    <div className="text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-300">
-                        <motion.h1 className="text-4xl font-bold tracking-tight  sm:text-6xl">
+                    </motion.div>
+                    <div className="text-center text-white">
+                        <motion.h1 className="text-4xl font-bold tracking-tight  sm:text-6xl"
+                            animate={{
+                                opacity: [0, 1],
+                                x: [-20, 0],
+                                transition: {
+                                    delay: 0.5,
+                                    type: 'spring',
+                                    bounce: 0
+                                }
+                            }}
+                        >
                             Elevate Your Brand with Clean Web Design.
 
                         </motion.h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-300">
+                        <motion.p className="mt-6 text-lg leading-8 text-gray-300"
+                            animate={{
+                                opacity: [0, 1],
+                                x: [-20, 0],
+                                transition: {
+                                    delay: 0.7,
+                                    type: 'spring',
+                                    bounce: 0
+                                }
+                            }}
+                        >
                             Crafting digital experiences that inspire and engage.
 
-                        </p>
-                        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-6">
+                        </motion.p>
+                        <motion.div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-6"
+                            animate={{
+                                opacity: [0, 1],
+                                x: [-20, 0],
+                                transition: {
+                                    delay: 1,
+                                    type: 'spring',
+                                    bounce: 0
+                                }
+                            }}
+                        >
 
                             <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
                                 <TransparentButton title='Message Us' size='lg' onClick={() => { }} />
@@ -82,7 +122,7 @@ const Hero = () => {
                                     </div>
                                 </div>
                             </ScrollLink>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div

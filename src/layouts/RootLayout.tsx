@@ -1,6 +1,6 @@
 
 import Navbar from '../components/Navbar'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { AnimatePresence } from 'framer-motion'
 
@@ -17,6 +17,7 @@ const RootLayout = () => {
           mode='wait'
 
         >
+          <ScrollRestoration />
           <Outlet />
         </AnimatePresence>
       </div>

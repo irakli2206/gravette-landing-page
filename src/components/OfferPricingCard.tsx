@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
+import { motion } from 'framer-motion'
 
 
 type Props = {
@@ -14,7 +15,17 @@ const OfferPricingCard = ({ className }: Props) => {
     ]
 
     return (
-        <div className={`mx-auto w-full [&>*]:transition  pointer-events-none  mb-8 ${className}`}>
+        <motion.div initial={{ opacity: 0, x: -30 }}
+            whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring',
+                    bounce: 0
+                }
+            }}
+            viewport={{once: true, amount: 0.5}}
+            className={`mx-auto w-full [&>*]:transition  pointer-events-none  mb-8 ${className}`}>
 
             <div className="mx-auto  max-w-2xl rounded-3xl ring-1 ring-indigo-300/30 hover:ring-indigo-300/50 bg-gray-900 lg:mx-0 lg:flex lg:max-w-none">
                 <div className="p-8 sm:p-10 lg:flex-auto">
@@ -59,7 +70,7 @@ const OfferPricingCard = ({ className }: Props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

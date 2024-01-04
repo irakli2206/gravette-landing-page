@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom'
 import AppIcon from './AppIcon'
 import classNames from 'classnames'
+import { motion } from 'framer-motion'
 
 type Props = {
     isMain: boolean
@@ -13,14 +14,30 @@ type Props = {
     buttonAction: () => void
     priceOff?: number
     className?: string
+    custom?: number
 }
 
-const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceOff, className }: Props) => {
+const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceOff, className, custom }: Props) => {
     return (
-        <div className={classNames(`flex flex-col relative flex-1 w-full max-w-xl rounded-xl transition  px-10 py-12  pointer-events-none overflow-hidden ${className}`, {
-            'ring-1  ring-indigo-500/30 hover:ring-indigo-500/50 bg-indigo-500 bg-opacity-10': isMain,
-            'ring-1  ring-indigo-300/30 hover:ring-indigo-300/50 ': !isMain
-        })}>
+        <motion.div
+            initial={{
+                opacity: 0,
+                x: custom == 0 ? -20 : 20,
+            }}
+            whileInView={{
+                opacity: 1,
+                x: 0
+            }}
+            transition={{
+                type: 'spring',
+                bounce: 0,
+                duration: 0.5
+             }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={classNames(`flex flex-col relative flex-1 w-full max-w-xl rounded-xl  px-10 py-12  pointer-events-none overflow-hidden ${className}`, {
+                'ring-1  ring-indigo-500/30 hover:ring-indigo-500/50 bg-indigo-500 bg-opacity-10': isMain,
+                'ring-1  ring-indigo-300/30 hover:ring-indigo-300/50 ': !isMain
+            })}>
             {priceOff && <div className="absolute  top-4 -right-20 rotate-45 bg-indigo-400 w-64 px-4 py-2  flex justify-center items-end">
                 <p className='text-lg'>{priceOff}% Off</p>
             </div>}
@@ -52,7 +69,7 @@ const PricingCard = ({ isMain, type, price, desc, features, buttonAction, priceO
                 Get In Touch
             </Link>
 
-        </div>
+        </motion.div>
     )
 }
 

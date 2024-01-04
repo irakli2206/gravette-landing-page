@@ -2,6 +2,7 @@
 import { TransparentButton } from '../Buttons'
 import Chart from '../../assets/CTA.svg'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const CTA = () => {
     return (
@@ -9,7 +10,16 @@ const CTA = () => {
             <div className='flex flex-col md:flex-row justify-between'>
                 <div className="flex flex-col items-center mx-auto py-24 md:py-64 max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 z-20">
                     <div className="text-left">
-                        <h2 className="text-4xl md:text-5xl font-semibold">Give your business the competitive <br /> edge with <span className=' drop-shadow-glow shadow-indigo-500  '>Gravette</span>'s solutions  </h2>
+                        <h2 className="text-4xl md:text-5xl font-semibold">Give your business the competitive <br /> edge with <motion.span className=''
+                            animate={{
+                                textShadow: ['0 0px 6px rgba(255,255, 255, 0.35)', "0 0px 16px rgba(255,255, 255, 0.75)",  "0 0px 16px rgba(255,255, 255, 0.75)", '0 0px 6px rgba(255,255, 255, 0.35)' ]
+                            }}
+                            transition={{
+                                duration: 4,
+                                times: [0, 0.5, 0.6, 1],
+                                repeat: Infinity
+                            }}
+                        >Gravette</motion.span>'s solutions  </h2>
                         <p className="mt-6 text-gray-300">Start upgrading your online  presence today!</p>
                         <div className="mt-10">
                             <Link to='contact' className='rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' >
