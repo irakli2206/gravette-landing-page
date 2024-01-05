@@ -1,38 +1,82 @@
-import { motion } from "framer-motion"
+import { distance, motion } from "framer-motion"
 import { PiInfo } from "react-icons/pi";
 import ChangelogCard from "../components/changelog/ChangelogCard";
 import classNames from "classnames";
 import CardBG from '../assets/card-bg.svg'
+import { useEffect, useRef, useState } from "react";
+import { FaRegCircle } from "react-icons/fa";
+
+const changelogData = [
+
+    {
+        version: "Version 1.2",
+        date: "Dec 23, 2023",
+        improvements: [
+            "Improvements in our curated UI/UX design template list",
+            "Added changelog page"
+        ],
+
+        imageSrc: CardBG
+    },
+    {
+        version: "Version 1.1",
+        date: "Dec 12, 2023",
+        improvements: [
+            "Added design services",
+            "Now partnered with Ancestral Whispers",
+        ],
+        bugfixes: [
+            "Fixed mobile responsiveness issue"
+        ]
+    },
+    {
+        date: "Nov 25, 2023",
+        version: "Website Launch"
+    },
+]
+
 
 const Changelog = () => {
-    const changelogData = [
+    const [y, setY] = useState(0)
+    const [maxScrollY, setMaxScrollY] = useState(0)
 
-        {
-            version: "Version 1.3",
-            date: "Dec 23, 2023",
-            improvements: [
-                "Improvements in our curated UI/UX design template list",
-                "Added changelog page"
-            ],
+    useEffect(() => {
+        window.addEventListener('scroll', (event) => {
+            // console.log(window.screenY)
+            // console.log(window.scrollY)
+            let scrollY = window.scrollY
+            const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
 
-            imageSrc: CardBG
-        },
-        {
-            version: "Version 1.1",
-            date: "Dec 12, 2023",
-            improvements: [
-                "Added design services",
-                "Now partnered with Ancestral Whispers",
-            ],
-            bugfixes: [
-                "Fixed mobile responsiveness issue"
-            ]
-        },
-        {
-            date: "Nov 25, 2023",
-            version: "Website Launch"
-        },
-    ]
+            setY(scrollY)
+            setMaxScrollY(maxScrollY)
+            let dates = document.getElementsByName('date')
+            let whiteLine = document.getElementById('white-line')
+            let distanceFromTop = 0
+            dates.forEach((date, i) => {
+                if (whiteLine) {
+                    let rect: any = date.getBoundingClientRect()
+                    let whiteLineRect = whiteLine?.getBoundingClientRect()
+                    if (i === 0) distanceFromTop = rect.top
+                    console.log('line', whiteLineRect.bottom)
+                    console.log(rect.bottom - (rect.height / 2))
+                    if (rect.bottom - (rect.height / 2) < whiteLineRect.bottom) {
+                        date.style.color = 'white '
+                        date.style.fontWeight = 'medium '
+                        //@ts-ignore
+                        date.children.item(0).style.borderColor = 'white'
+                        // let dateChildren = document.querySelectorAll('[name=')
+                    }
+                    else {
+                        date.style.color = 'rgb(156 163 175 / var(--tw-text-opacity))'
+                        //@ts-ignore
+                        date.children.item(0).style.borderColor = 'gray'
+                    }
+                }
+
+            })
+        })
+    }, [])
+
 
     return (
         <motion.div
@@ -64,7 +108,10 @@ const Changelog = () => {
             <section className="relative z-40 max-w-screen-xl   px-4 h-full mx-auto ">
 
 
-                <div className="relative  rounded-3xl ring-1 ring-gray-400/20 w-full bg-indigo-900/20  overflow-hidden">
+                <motion.div
+
+
+                    className="relative  rounded-3xl ring-1 ring-gray-400/20 w-full bg-indigo-900/20  overflow-hidden">
                     <div className="flex relative justify-center items-center overflow-hidden py-10  w-full h-full">
                         <div
                             className="absolute inset-x-0 h-full z-10 transform-gpu overflow-hidden blur-3xl sm:top-0"
@@ -83,21 +130,31 @@ const Changelog = () => {
                     <div className="flex items-center px-4 py-6 text-slate-400 font-light font-poppins  italic"><PiInfo size={20} className='mr-2' />
                         A changelog of the latest <span className="text-white font-medium px-1">Gravette</span> feature releases, updates and bug fixes
                     </div>
-                </div>
+                </motion.div>
 
 
-                <div className="flex relative z-10 mt-20 max-w-3xl mx-auto justify-between items-center">
+                <div className="flex sticky h-auto z-10 mt-20 max-w-3xl mx-auto justify-between items-center">
                     <div
-                        className="absolute left-0 top-2 h-full border border-gray-500/30 border-dashed "
-                    />
+                        className="absolute left-0 top-2 h-full"
+                    >
+                        <div className="h-full border
+                         border-gray-500/30  
+                        border-dashed absolute z-10 "></div>
+                        <div id='white-line' className={`  border
+                         border-white absolute z-20 
+                        border-dashed` } style={{ height: `${y / maxScrollY * 100}%` }} ></div>
+                    </div>
 
                     <div className="relative -ms-[3px] gap-8 flex flex-col w-full justify-between">
                         {changelogData.map((log, i) => {
 
-                            return <div className="flex justify-between w-full">
-                                <div className={classNames("text-sm font-medium", {
-                                    'text-gray-400 !font-light': i !== 0
-                                })}>○ &nbsp; {log.date}</div>
+                            return <div key={i} className="flex justify-between w-full">
+                                {/* @ts-ignore */ }
+                                <div name='date' key={i} className={classNames("flex h-fit items-center text-sm font-medium relative z-50", {
+
+                                })}>
+                                    <div className="rounded-full border border-gray-400 w-2 h-2 bg-indigo-950 "></div>
+                                    &nbsp; {log.date}</div>
                                 {log.version && <ChangelogCard {...log} />}
                             </div>
                         })}
@@ -109,3 +166,4 @@ const Changelog = () => {
 }
 
 export default Changelog
+

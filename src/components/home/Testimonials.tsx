@@ -86,20 +86,20 @@ const Testimonials = () => {
             <div className='relative max-w-screen-2xl mx-auto '>
                 <div className="absolute bg-gradient-to-b from-transparent to-gray-900 from-40% to-90%  z-50 w-full h-full pointer-events-none"></div>
                 <div className='grid md:grid-cols-2 xl:grid-cols-4 xl:grid-flow-col  relative gap-8 mt-16 bottom-4 z-10'>
-                    <motion.div viewport={{once: true, amount: 0.6}} variants={container} initial="hidden"
+                    <motion.div viewport={{once: true }} variants={container} initial="hidden"
                         whileInView="show" className="  sm:col-span-2 row-end-1 col-start-1 xl:col-start-2">
                         <Testimonial {...testimonialData[0]} isMain={true} />
                     </motion.div>
 
                     <div className="contents">
-                        <motion.div variants={container} viewport={{once: true, amount: 0.6}} initial="hidden"
+                        <motion.div variants={container} viewport={{once: true }} initial="hidden"
                             whileInView="show"
                             className='row-span-2 space-y-8'>
                             <Testimonial {...testimonialData[1]} />
                             <Testimonial {...testimonialData[2]} />
                             <Testimonial {...testimonialData[3]} />
                         </motion.div>
-                        <motion.div viewport={{once: true, amount: 0.6}} variants={container} initial="hidden"
+                        <motion.div viewport={{once: true }} variants={container} initial="hidden"
                             whileInView="show" className='row-start-1 space-y-8'>
                             <Testimonial {...testimonialData[4]} />
                             <Testimonial {...testimonialData[5]} />
@@ -107,12 +107,12 @@ const Testimonials = () => {
                     </div>
 
                     <div className=" hidden sm:contents">
-                        <motion.div viewport={{once: true, amount: 0.6}} variants={container} initial="hidden"
+                        <motion.div viewport={{once: true }} variants={container} initial="hidden"
                             whileInView="show" className='row-start-1 space-y-8'>
                             <Testimonial {...testimonialData[6]} />
                             <Testimonial {...testimonialData[7]} />
                         </motion.div>
-                        <motion.div viewport={{once: true, amount: 0.6}} variants={container} initial="hidden"
+                        <motion.div viewport={{once: true }} variants={container} initial="hidden"
                             whileInView="show" className='row-span-2 space-y-8'>
                             <Testimonial {...testimonialData[8]} />
                             <Testimonial {...testimonialData[9]} />
