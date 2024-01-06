@@ -19,11 +19,11 @@ export default function Contact() {
             icon: <HiOutlineBuildingOffice2 size={24} />,
             text: "545 Mavis Island Chicago, IL 99191"
         },
-        {
-            icon: <MdOutlinePhone size={24} />,
-            text: "+1 (555) 234-5678",
-            link: "tel:+1 (555) 234-5678"
-        },
+        // {
+        //     icon: <MdOutlinePhone size={24} />,
+        //     text: "+1 (555) 234-5678",
+        //     link: "tel:+1 (555) 234-5678"
+        // },
         {
             icon: <AiOutlineMail size={24} />,
             text: "hello@example.com",
