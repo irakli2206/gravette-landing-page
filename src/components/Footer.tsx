@@ -12,7 +12,7 @@ const Footer = () => {
                     {/* <h1 className='text-3xl'>Coin Counsel</h1> */}
                 </div>
 
-                <p className="mt-5 text-center text-sm leading-6 ">© 2023 Gravette. All rights reserved.</p>
+                <p className="mt-5 text-center text-sm leading-6 ">© 2024 Gravette. All rights reserved.</p>
                 <div className="mt-16 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-gray-500 [&>*]:transition">
                     <a href="/privacy-policy" className='hover:text-gray-400'>Privacy policy</a><div className="h-4 w-px bg-slate-500/20">
                     </div>
