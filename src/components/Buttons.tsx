@@ -24,21 +24,25 @@ export const Button = ({ title, size = 'md', className, onClick, ...props }: But
 }
 
 export const TransparentButton = ({ title, size = 'md', className, glowClassName, onClick, ...props }: ButtonProps) => {
+    console.log(props.disabled)
     return (
-        <motion.button 
-        whileTap={{
-            scale: 0.95,
-            transition: {
-                duration: 0
-            }
-        }}
-        onClick={onClick} className={classNames(`${className}  bg-indigo-800/20 group relative duration-200 overflow-hidden h-full ring-1 ring-indigo-800  hover:ring-indigo-700 hover:bg-indigo-800/30 text-white font-medium text-sm text-center transition rounded-md  mb-auto cursor-pointer pointer-events-auto  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`, {
-            'px-5 py-1.5 ': size == 'sm',
-            'px-6 py-2': size == 'md',
-            'px-11 py-2': size == 'lg',
-            'px-16 py-2.5': size == 'xl',
-        })}  {...props} >
-            <div className={`${glowClassName} bg-transparent-button z-10 w-full h-24 absolute top-0 translate-y-10 duration-200 left-1/2 -translate-x-1/2 group-hover:translate-y-0`}></div>
+        <motion.button
+            whileTap={{
+                scale: props.disabled ? 1 : 0.95,
+                transition: {
+                    duration: 0
+                }
+            }}
+            onClick={onClick} className={classNames(`${className}  bg-indigo-800/20 group relative duration-200 overflow-hidden h-full ring-1 ring-indigo-800  hover:ring-indigo-700 hover:bg-indigo-800/30 text-white font-medium text-sm text-center transition rounded-md  mb-auto cursor-pointer pointer-events-auto  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`, {
+                'px-5 py-1.5 ': size == 'sm',
+                'px-6 py-2': size == 'md',
+                'px-11 py-2': size == 'lg',
+                'px-16 py-2.5': size == 'xl',
+                '!bg-gray-800 ring-0 !text-gray-600 cursor-default': props.disabled
+            })}  {...props} >
+            <div className={classNames(`${glowClassName} bg-transparent-button z-10 w-full h-24 absolute top-0 translate-y-10 duration-200 left-1/2 -translate-x-1/2 group-hover:translate-y-0`, {
+                'hidden': props.disabled
+            })}></div>
             {/* <div className="w-full h-full absolute top-0 left-0 opacity-0 duration-200 group-hover:opacity-100 group-hover:bg-gradient-to-t group-hover:from-indigo-900/25 group-hover:to-indigo-900/15"></div> */}
             <span className='z-50 relative'>{title}</span>
         </motion.button>

@@ -1,5 +1,5 @@
 
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import classNames from 'classnames'
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { MdOutlinePhone } from "react-icons/md";
@@ -10,9 +10,11 @@ import '../../index.css'
 import { TransparentButton } from '../Buttons';
 import { IoWarning } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import { useSnackbar } from 'notistack';
 
 export default function Contact() {
-    // const [agreed, setAgreed] = useState(false)
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar()
 
     let contactData = [
         {
@@ -33,11 +35,27 @@ export default function Contact() {
 
     const schema = Yup.object({
         firstName: Yup.string().required("Field required"),
-        lastName: Yup.string().required("Field required"),
+        lastName: Yup.string(),
         email: Yup.string().email("Invalid email").required("Field required"),
         subject: Yup.string().required("Field required"),
         message: Yup.string().required("Field required")
     });
+
+    const sendEmail = async ({ firstName, lastName, email, message }: any) => {
+        var formData = {
+            'from_name': firstName + " " + lastName,
+            'email': email,
+            'message': message,
+        }
+
+
+        await emailjs.send('service_tntt2hw', 'template_pv2ik2y', formData, 'uW_Ic19sJ1BibkXJM')
+            .then((result) => {
+                enqueueSnackbar("Message sent successfully!", { variant: "success", anchorOrigin: { horizontal: 'right', vertical: "bottom" } })
+            }, (error) => {
+                enqueueSnackbar("Oops, something went wrong.", { variant: "error", anchorOrigin: { horizontal: 'right', vertical: "bottom" } })
+            });
+    };
 
     return (
         <div className="min-h-screen flex ">
@@ -69,6 +87,7 @@ export default function Contact() {
 
                 <div className="flex-1 h-full w-full py-24 lg:py-40 px-8 bg-gray-900 ">
                     <Formik
+
                         validationSchema={schema}
                         initialValues={{
                             firstName: "",
@@ -77,11 +96,17 @@ export default function Contact() {
                             subject: "",
                             message: ""
                         }}
-                        onSubmit={(values, { }) => {
-                            console.log(values)
+                        onSubmit={async (values, { setSubmitting, resetForm }) => {
+                            setSubmitting(true)
+                            await sendEmail(values).finally(() => {
+                                setSubmitting(false)
+                                resetForm()
+                            })
+
+                            // sendEmail(values)
                         }}
                     >
-                        {() => (
+                        {({ isValidating, isSubmitting }) => (
                             <Form className='flex flex-col gap-6 '>
                                 <div className="flex gap-8 w-full">
                                     <Field name="firstName"
@@ -92,6 +117,7 @@ export default function Contact() {
                                         } />
                                     <Field name="lastName"
                                         label="Last Name"
+                                        placeholder='Optional'
                                         className="block flex-1 outline-none w-full bg-white/5 rounded-md border-0 px-3.5 py-2 text-whiteshadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                         component={
                                             FormInput
@@ -117,7 +143,7 @@ export default function Contact() {
                                         FormInput
                                     } />
 
-                                <TransparentButton onClick={() => { }} title='Send Message' type="submit" className='mt-2' />
+                                <TransparentButton disabled={isSubmitting} onClick={() => { }} title='Send Message' type="submit" className='mt-2' />
                             </Form>
                         )}
                     </Formik>

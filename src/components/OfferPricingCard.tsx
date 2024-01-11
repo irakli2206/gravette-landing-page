@@ -1,5 +1,6 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 type Props = {
@@ -57,12 +58,12 @@ const OfferPricingCard = ({ className }: Props) => {
                                 <span className="text-5xl font-bold tracking-tight text-white">$9000+</span>
                                 <span className="text-sm font-semibold leading-6 tracking-wide text-indigo-300">USD</span>
                             </p>
-                            <a
-                                href="#"
+                            <Link
+                                to="contact"
                                 className="transition mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-medium text-white shadow-sm pointer-events-auto hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Get In Touch
-                            </a>
+                            </Link>
                             <p className="mt-6 text-xs leading-5 text-gray-400">
                                 Contact us to learn about additional maintenance fees
                             </p>
