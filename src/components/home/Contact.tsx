@@ -19,7 +19,7 @@ export default function Contact() {
     let contactData = [
         {
             icon: <HiOutlineBuildingOffice2 size={24} />,
-            text: "545 Mavis Island Chicago, IL 99191"
+            text: "4 Avalishvili Str, Tbilisi, Georgia"
         },
         // {
         //     icon: <MdOutlinePhone size={24} />,
@@ -28,8 +28,8 @@ export default function Contact() {
         // },
         {
             icon: <AiOutlineMail size={24} />,
-            text: "hello@example.com",
-            link: "mailto:hello@example.com"
+            text: "support@gravette.dev",
+            link: "support@gravette.dev"
         },
     ]
 
