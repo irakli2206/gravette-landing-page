@@ -66,9 +66,9 @@ export default function Contact() {
                     <div className="flex flex-col gap-4 mt-10 z-50 relative">
                         {contactData.map((contact, i) => {
                             let clickable = i !== 0
-
+                            let isMail = contact.link?.includes('@')
                             return (
-                                <Link to={contact.link!} key={i} className={classNames('flex w-fit gap-4 relative z-90 duration-200  text-gray-300', {
+                                <Link to={(isMail &&'mailto:') + contact.link!} key={i} className={classNames('flex w-fit gap-4 relative z-90 duration-200  text-gray-300', {
                                     "cursor-pointer hover:text-white": clickable
                                 })}>
                                     {contact.icon}
