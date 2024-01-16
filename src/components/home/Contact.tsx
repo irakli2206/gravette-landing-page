@@ -62,7 +62,7 @@ export default function Contact() {
             <div className='flex flex-1 flex-col lg:flex-row items-center '>
                 <div className="flex-1 h-full py-24 lg:py-40 px-8 bg-gray-900 relative ">
                     <h1 className='font-bold text-3xl pt-10 z-50 relative'>Get in touch</h1>
-                    <p className='text-lg text-gray-300 mt-6 z-50 relative'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nulla consequatur doloremque itaque illum illo molestiae numquam accusantium aut, explicabo, omnis perspiciatis molestias? Quae, soluta!</p>
+                    <p className='text-lg text-gray-300 mt-6 z-50 relative'>Feel free to reach out with any questions or inquiries; we're here to help and look forward to connecting with you!</p>
                     <div className="flex flex-col gap-4 mt-10 z-50 relative">
                         {contactData.map((contact, i) => {
                             let clickable = i !== 0
