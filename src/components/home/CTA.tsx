@@ -31,7 +31,7 @@ const CTA = () => {
 
                 <div className='relative h-[400px] md:h-[550px] left-20 md:left-0 -mr-48 my-auto z-30 '>
                     <div className='w-full h-full bg-gradient-to-r from-transparent to-gray-900 to-75% absolute '></div>
-                    <img src={Chart} className='h-full object-cover object-left ' />
+                    <img alt='' src={Chart} className='h-full object-cover object-left ' />
                 </div>
             </div>
             <div className="absolute w-full h-[800px]  -bottom-[550px] left-1/2 -translate-x-1/2 bg-cta"></div>

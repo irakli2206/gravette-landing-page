@@ -102,7 +102,7 @@ const Hero = () => {
                             </Link>
 
 
-                            <ScrollLink smooth={true} to="features"  >
+                            <ScrollLink href='' smooth={true} to="features"  >
                                 <div className={classNames('transition cursor-pointer text-sm text-white font-medium flex gap-2.5 items-center group ', {
 
                                 })}>

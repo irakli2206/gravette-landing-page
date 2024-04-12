@@ -73,7 +73,7 @@ const Testimonial = ({ author, testimonial, logo, socialsLink, isMain = false }:
                             {socialsLink && <a href='https://twitter.com/Sulkalmakh' className='text-gray-400  duration-100 hover:text-gray-300'>{socialsLink}</a>}
                         </div>
                         {logo && <Link to='https://ancestralwhispers.org' target="_blank" className='' rel="noopener noreferrer" >
-                            <img src={logo} className='h-12 w-12 hover:drop-shadow-glow duration-100' />
+                            <img alt='' src={logo} className='h-12 w-12 hover:drop-shadow-glow duration-100' />
                         </Link>}
                     </div>
                 </div>
