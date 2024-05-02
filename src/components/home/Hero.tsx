@@ -68,7 +68,7 @@ const Hero = () => {
                                 }
                             }}
                         >
-                            Elevate Your Brand with Clean Web Design.
+                            Software Solutions for Everyone.
 
                         </motion.h1>
                         <motion.p className="mt-6 text-lg leading-8 text-gray-300"
