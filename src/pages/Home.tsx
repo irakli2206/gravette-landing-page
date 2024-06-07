@@ -33,32 +33,34 @@ const Home = () => {
   };
 
   return (
+    <>
+      <a className='sr-only' href="https://jobby.ge"></a>
+      <motion.div className='bg-gray-900'
+        key='home'
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        exit={{
+          opacity: 0,
+        }}
 
-    <motion.div className='bg-gray-900'
-      key='home'
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-      }}
-
-    >
-      <Hero />
-      <div id='features' >
-        <Features />
-      </div>
-      <div ref={testimonialRef}>
-        <Testimonials />
-      </div>
-      <div ref={pricingRef}>
-        <Pricing />
-      </div>
-      <CTA />
-    </motion.div>
+      >
+        <Hero />
+        <div id='features' >
+          <Features />
+        </div>
+        <div ref={testimonialRef}>
+          <Testimonials />
+        </div>
+        <div ref={pricingRef}>
+          <Pricing />
+        </div>
+        <CTA />
+      </motion.div>
+    </>
   )
 }
 
